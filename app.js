@@ -1,8 +1,10 @@
 (function (){
 'use strict';
 angular.module('LunchCheck',[])
-.controller('LunchCheckController', function($scope){
+.controller('LunchCheckController', LunchCheck);
 
+LunchCheck.$inject=['$scope'];
+function LunchCheck($scope){
   $scope.message="";
 
   $scope.status=function (){
@@ -28,6 +30,6 @@ angular.module('LunchCheck',[])
 }
   };
 
-});
+};
 
 })();
